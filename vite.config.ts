@@ -4,20 +4,20 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
     host: "::",
     port: 8080,
   },
+  
+  // A single, simple base path is best for Vercel deployments.
+  base: "/",
 
-  // Use "/" for dev, "/portfolio/" for production (GitHub Pages)
-  base: mode === "production" ? "/portfolio/" : "/",
-
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [react(), componentTagger()].filter(Boolean),
   
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});
