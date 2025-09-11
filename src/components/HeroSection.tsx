@@ -111,7 +111,7 @@ const HeroSection = () => {
                 'Gen AI Engineer',
                 'LLM Engineer',
                 'Machine Learning Engineer',
-                'AI/Agentic AI Engineer',
+                'Agentic AI Engineer',
                 'LLMOps/MLOps Expert',
               ]}
               loop
